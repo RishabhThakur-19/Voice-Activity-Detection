@@ -1,0 +1,24 @@
+# Core 
+torch>=2.0.0
+torchaudio>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Audio I/O 
+sounddevice>=0.4.6    # real-time microphone capture
+soundfile>=0.12.1     # reading audio files (wav, flac, ogg, …)
+
+#  VAD
+# Silero VAD is loaded via torch.hub (downloaded automatically on first use)
+# No separate pip package needed for Silero.
+
+# Speaker Verification
+resemblyzer>=0.1.4    # speaker d-vectors (GE2E encoder)
+# Note: resemblyzer also needs: webrtcvad, umap-learn, visdom (for its demos)
+
+#  Feature Extraction
+librosa>=0.10.1       # MFCC, spectral features, pYIN pitch
+
+#  Deep Embeddings (optional — only if USE_DEEP_EMBEDDINGS = True)
+transformers>=4.40.0  # wav2vec2 model
+# accelerate>=0.29.0  # optional: faster HuggingFace model loading
